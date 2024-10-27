@@ -39,6 +39,18 @@ ul {
     padding-left: 1.5rem;
 }
 
+.app-store-badge {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.app-store-badge img {
+    display: block;
+    height: 40px;
+    width: auto;
+}
+
+/* 
 .app-store-button {
     display: inline-block;
     background-color: #4CAF50;
@@ -48,6 +60,7 @@ ul {
     border-radius: 5px;
     font-weight: bold;
 }
+*/
 
 footer {
     text-align: center;
