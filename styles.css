@@ -260,3 +260,63 @@ nav {
     color: white;
     text-decoration: none;
 }
+
+/* Policy Content */
+.policy-content {
+    padding-top: 80px; /* Account for fixed nav */
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.policy-content article {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.last-updated {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+/* License Items */
+.license-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.license-item h3 {
+    color: #4CAF50;
+    margin-top: 0;
+}
+
+.license-item a {
+    display: inline-block;
+    color: #2196F3;
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+
+.license-item a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .policy-content {
+        padding: 60px 1rem 1rem;
+    }
+    
+    .policy-content article {
+        padding: 1rem;
+    }
+    
+    .license-item {
+        padding: 1rem;
+    }
+}
