@@ -5,33 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rimar - Find Your Perfect Bench</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Rimar</h1>
-        <p>Find Your Perfect Bench!</p>
+    <nav>
+        <div class="nav-content">
+            <img src="icon.png" alt="Rimar Logo" class="nav-logo">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Use</a></li>
+                <li><a href="licenses.html">Licenses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <img src="icon.png" alt="Rimar App Icon" class="app-icon">
+            <h1>Rimar</h1>
+            <p class="tagline">Find Your Perfect Bench!</p>
+            <a href="https://apps.apple.com/app/your-app-id" class="app-store-badge">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
+            </a>
+        </div>
     </header>
+
     <main>
         <section id="features">
             <h2>Features</h2>
-            <ul>
-                <li>Explore Nearby Benches</li>
-                <li>Save Favorite Spots</li>
-                <li>Search Functionality</li>
-                <li>Get Directions</li>
-                <li>User Profiles</li>
-                <li>Privacy Settings</li>
-            </ul>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="feature-icon">🗺️</i>
+                    <h3>Explore Nearby Benches</h3>
+                    <p>Discover comfortable spots in your vicinity with our interactive map.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="feature-icon">⭐</i>
+                    <h3>Save Favorites</h3>
+                    <p>Keep track of your favorite benches for future visits.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="feature-icon">🔍</i>
+                    <h3>Smart Search</h3>
+                    <p>Find benches by location, features, or user ratings.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="feature-icon">🧭</i>
+                    <h3>Get Directions</h3>
+                    <p>Navigate easily to your chosen bench.</p>
+                </div>
+            </div>
         </section>
-        <section id="download">
-            <h2>Download Now</h2>
-            <a href="https://apps.apple.com/app/your-app-id" class="app-store-badge">
-                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" style="height: 40px;">
-            </a>
+
+        <section id="screenshots">
+            <h2>App Preview</h2>
+            <div class="screenshot-carousel">
+                <button class="carousel-button prev">❮</button>
+                <div class="screenshots">
+                    <img src="placeholder1.jpg" alt="App Screenshot 1">
+                    <img src="placeholder2.jpg" alt="App Screenshot 2">
+                </div>
+                <button class="carousel-button next">❯</button>
+            </div>
+        </section>
+
+        <section id="feedback" class="feedback-section">
+            <h2>Help Us Improve</h2>
+            <div class="feedback-container">
+                <div class="feedback-card">
+                    <h3>Suggest a Feature</h3>
+                    <form id="suggestionForm" class="feedback-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your suggestion" required></textarea>
+                        <button type="submit">Send Suggestion</button>
+                    </form>
+                </div>
+                <div class="feedback-card">
+                    <h3>Report an Issue</h3>
+                    <form id="issueForm" class="feedback-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Describe the issue" required></textarea>
+                        <button type="submit">Report Issue</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions? We're here to help!</p>
+            <div class="contact-methods">
+                <a href="mailto:support@rimarapp.com" class="contact-button">Email Support</a>
+                <a href="https://twitter.com/rimarapp" class="contact-button">Twitter</a>
+                <a href="https://github.com/ricomontulet/rimar-issues/issues" class="contact-button">GitHub Issues</a>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Rimar. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="licenses.html">Licenses</a>
+            </div>
+            <p>&copy; 2024 Rimar. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
