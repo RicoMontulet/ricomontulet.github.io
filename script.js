@@ -32,10 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = formData.get('email');
         const message = formData.get('message');
 
-        // Here you would typically send this data to your backend
-        console.log(`${formType} submitted:`, { email, message });
-        
-        // Show success message
+        // Open the user's default email client
+        const subject = encodeURIComponent(`${formType} from ${email}`);
+        const body = encodeURIComponent(message);
+        window.location.href = `mailto:RimarApp@montulet.nl?subject=${subject}&body=${body}`;
+
         alert(`Thank you for your ${formType.toLowerCase()}! We'll review it soon.`);
         event.target.reset();
     }
