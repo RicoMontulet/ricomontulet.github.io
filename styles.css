@@ -174,31 +174,61 @@ nav {
     position: relative;
     overflow: hidden;
     margin: 2rem 0;
+    padding: 0 2rem;
 }
 
 .screenshots {
     display: flex;
     transition: transform 0.3s ease;
+    gap: 1rem;
 }
 
-.screenshots img {
+.screenshot-slide {
+    flex: 0 0 calc(33.333% - 0.667rem); /* Show 3 images, accounting for gaps */
+    min-width: calc(33.333% - 0.667rem);
+}
+
+.screenshot-slide img {
     width: 100%;
-    flex-shrink: 0;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.9);
     border: none;
     padding: 1rem;
     cursor: pointer;
     z-index: 1;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.carousel-button:hover {
+    background: rgba(255,255,255,1);
 }
 
 .carousel-button.prev { left: 0; }
 .carousel-button.next { right: 0; }
+
+/* Responsive carousel */
+@media (max-width: 768px) {
+    .screenshot-slide {
+        flex: 0 0 calc(100% - 1rem);
+        min-width: calc(100% - 1rem);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .screenshot-slide {
+        flex: 0 0 calc(50% - 0.5rem);
+        min-width: calc(50% - 0.5rem);
+    }
+}
 
 /* Feedback Section */
 .feedback-section {
