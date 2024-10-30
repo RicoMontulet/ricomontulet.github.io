@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rimar - Find Your Perfect Bench</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="nav.js"></script>
     <script src="script.js" defer></script>
-    <link rel="icon" href="imgs/RimarIcon.png" type="image/png">
+    <!-- <link rel="icon" href="imgs/RimarIcon.png" type="image/png"> -->
 </head>
 <body>
-    <nav>
+    <!-- <nav>
         <div class="nav-content">
             <a href="index.html">
                 <img src="imgs/RimarIcon.png" alt="Rimar Logo" class="nav-logo">
@@ -23,7 +22,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
 
     <header class="hero">
         <div class="hero-content">
@@ -80,16 +79,16 @@
                 <div class="feedback-card">
                     <h3>Suggest a Feature</h3>
                     <form id="suggestionForm" class="feedback-form">
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea placeholder="Your suggestion" required></textarea>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your suggestion" required></textarea>
                         <button type="submit">Send Suggestion</button>
                     </form>
                 </div>
                 <div class="feedback-card">
                     <h3>Report an Issue</h3>
                     <form id="issueForm" class="feedback-form">
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea placeholder="Describe the issue" required></textarea>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Describe the issue" required></textarea>
                         <button type="submit">Report Issue</button>
                     </form>
                 </div>
@@ -115,5 +114,7 @@
             <p>&copy; 2024 Rimar. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="nav.js"></script>
 </body>
 </html>

@@ -79,13 +79,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = formData.get('email');
         const message = formData.get('message');
 
-        // Open the user's default email client
-        const subject = encodeURIComponent(`${formType} from ${email}`);
-        const body = encodeURIComponent(message);
-        window.location.href = `mailto:RimarApp@montulet.nl?subject=${subject}&body=${body}`;
+        // Only proceed if we have both email and message
+        if (email && message) {
+            // Open the user's default email client with pre-filled content
+            const subject = encodeURIComponent(`Rimar ${formType} from ${email}`);
+            const body = encodeURIComponent(message);
+            window.location.href = `mailto:RimarApp@montulet.nl?subject=${subject}&body=${body}`;
 
-        alert(`Thank you for your ${formType.toLowerCase()}! We'll review it soon.`);
-        event.target.reset();
+            // Reset the form and show confirmation
+            event.target.reset();
+            alert(`Thank you for your ${formType.toLowerCase()}! Your email client should open now.`);
+        } else {
+            alert('Please fill in all fields.');
+        }
     }
 
     suggestionForm?.addEventListener('submit', (e) => handleFormSubmit(e, 'Suggestion'));
