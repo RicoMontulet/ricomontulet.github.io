@@ -436,3 +436,10 @@ nav {
         max-width: 90%;
     }
 }
+
+.success-message {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 1.2em;
+    padding: 20px;
+}

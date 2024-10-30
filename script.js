@@ -70,30 +70,20 @@ document.addEventListener('DOMContentLoaded', function() {
     loadScreenshots();
 
     // Form submission handling
-    const suggestionForm = document.getElementById('suggestionForm');
-    const issueForm = document.getElementById('issueForm');
-
-    function handleFormSubmit(event, formType) {
-        event.preventDefault();
-        const formData = new FormData(event.target);
-        const email = formData.get('email');
-        const message = formData.get('message');
-
-        // Only proceed if we have both email and message
-        if (email && message) {
-            // Open the user's default email client with pre-filled content
-            const subject = encodeURIComponent(`Rimar ${formType} from ${email}`);
-            const body = encodeURIComponent(message);
-            window.location.href = `mailto:RimarApp@montulet.nl?subject=${subject}&body=${body}`;
-
-            // Reset the form and show confirmation
-            event.target.reset();
-            alert(`Thank you for your ${formType.toLowerCase()}! Your email client should open now.`);
-        } else {
-            alert('Please fill in all fields.');
-        }
+    var submitted = false;
+    const gform = document.getElementById('gform');
+    
+    if (gform) {
+        gform.addEventListener('submit', function(e) {
+            const formElements = gform.querySelectorAll('input, textarea, button');
+            formElements.forEach(element => {
+                element.style.transition = 'opacity 2s';
+                element.style.opacity = '0';
+            });
+            
+            setTimeout(() => {
+                gform.innerHTML = '<p class="success-message">Thank you for your feedback!</p>';
+            }, 2000);
+        });
     }
-
-    suggestionForm?.addEventListener('submit', (e) => handleFormSubmit(e, 'Suggestion'));
-    issueForm?.addEventListener('submit', (e) => handleFormSubmit(e, 'Issue'));
 });

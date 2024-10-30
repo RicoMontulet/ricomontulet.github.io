@@ -6,24 +6,8 @@
     <title>Rimar - Find Your Perfect Bench</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <!-- <link rel="icon" href="imgs/RimarIcon.png" type="image/png"> -->
 </head>
 <body>
-    <!-- <nav>
-        <div class="nav-content">
-            <a href="index.html">
-                <img src="imgs/RimarIcon.png" alt="Rimar Logo" class="nav-logo">
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms of Use</a></li>
-                <li><a href="licenses.html">Licenses</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav> -->
-
     <header class="hero">
         <div class="hero-content">
             <img src="imgs/RimarIcon.png" alt="Rimar App Icon" class="app-icon">
@@ -77,20 +61,16 @@
             <h2>Help Us Improve</h2>
             <div class="feedback-container">
                 <div class="feedback-card">
-                    <h3>Suggest a Feature</h3>
-                    <form id="suggestionForm" class="feedback-form">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" placeholder="Your suggestion" required></textarea>
-                        <button type="submit">Send Suggestion</button>
+                    <h3>Send Feedback</h3>
+                    <form id="gform" enctype="text/plain" 
+                          action="https://docs.google.com/forms/d/e/1FAIpQLSfBekhBnBsnLHoamghDyOGQn6fn-OI9wlDCJhpT1KHd-JZS5g/formResponse?" 
+                          target="hidden_iframe" 
+                          onsubmit="submitted=true;">
+                        <input type="email" name="entry.1518029739" id="entry.1518029739" placeholder="Your Email" required>
+                        <textarea name="entry.1347256394" id="entry.1347256394" placeholder="Your message" required></textarea>
+                        <button type="submit">Send Feedback</button>
                     </form>
-                </div>
-                <div class="feedback-card">
-                    <h3>Report an Issue</h3>
-                    <form id="issueForm" class="feedback-form">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" placeholder="Describe the issue" required></textarea>
-                        <button type="submit">Report Issue</button>
-                    </form>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
                 </div>
             </div>
         </section>
