@@ -278,7 +278,8 @@ nav {
 
 /* Feedback Section */
 .feedback-section {
-    background: #f9f9f9;
+    background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+    padding: 3rem 2rem;
 }
 
 .feedback-container {
@@ -288,67 +289,125 @@ nav {
 
 .feedback-card {
     background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.feedback-card h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
 #gform {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 #gform input,
 #gform textarea {
     width: 100%;
-    padding: 0.8rem;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    border: 2px solid #eaeaea;
+    border-radius: 12px;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    color: #2c3e50;
     box-sizing: border-box;
+}
+
+#gform input::placeholder,
+#gform textarea::placeholder {
+    color: #94a3b8;
 }
 
 #gform input:focus,
 #gform textarea:focus {
     outline: none;
     border-color: #4CAF50;
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.1);
 }
 
 #gform textarea {
-    min-height: 120px;
+    min-height: 140px;
     resize: vertical;
+    line-height: 1.5;
 }
 
 #gform button {
     background: #4CAF50;
     color: white;
     border: none;
-    padding: 1rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+    position: relative;
+    overflow: hidden;
 }
 
 #gform button:hover {
     background: #45a049;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+}
+
+#gform button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(76, 175, 80, 0.2);
 }
 
 .success-message {
     text-align: center;
     color: #4CAF50;
-    font-size: 1.2em;
-    padding: 20px;
-    font-weight: bold;
-    animation: fadeIn 0.5s ease-in;
+    font-size: 1.3em;
+    padding: 2rem;
+    font-weight: 600;
+    animation: fadeInUp 0.6s ease-out;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments for the form */
+@media (max-width: 768px) {
+    .feedback-section {
+        padding: 2rem 1rem;
+    }
+    
+    .feedback-card {
+        padding: 1.5rem;
+    }
+    
+    #gform input,
+    #gform textarea {
+        padding: 0.9rem 1rem;
+    }
+    
+    .feedback-card h3 {
+        font-size: 1.3rem;
+    }
 }
 
 /* Contact Section */
